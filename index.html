@@ -54,5 +54,17 @@
         async>
   </section>
 </script>
+  <p style="font-family: sans-serif;">
+  <img src="https://img.icons8.com/ios-glyphs/24/visible.png" alt="vistas" style="vertical-align: middle; margin-right: 5px;">
+  <span id="contador">0</span> vistas
+</p>
+
+<script>
+  fetch('https://api.countapi.xyz/update/piovers/entrada-general/?amount=1')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('contador').innerText = data.value;
+    });
+</script>
 </body>
 </html>
